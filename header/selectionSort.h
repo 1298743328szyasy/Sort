@@ -2,8 +2,8 @@
 // Created by songai on 2019/9/2.
 //
 
-#ifndef SORT_INSERTIONSORT_H
-#define SORT_INSERTIONSORT_H
+#ifndef SORT_SELECTIONSORT_H
+#define SORT_SELECTIONSORT_H
 #include <iostream>
 #include <algorithm>
 
@@ -18,4 +18,4 @@ void selectionSort(T arr[],int n){
         swap(arr[i],arr[minIndex]);
     }
 }
-#endif //SORT_INSERTIONSORT_H
+#endif //SORT_SELECTIONSORT_H

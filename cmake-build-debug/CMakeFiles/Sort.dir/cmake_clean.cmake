@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Sort.dir/selectionSort.cpp.obj"
+  "CMakeFiles/Sort.dir/main/shellSort.cpp.obj"
   "Sort.pdb"
   "Sort.exe"
   "Sort.exe.manifest"

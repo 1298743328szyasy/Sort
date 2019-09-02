@@ -80,10 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/insertionSort.h">
+			<Option target="Sort"/>
+		</Unit>
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/selectionSort.h">
 			<Option target="Sort"/>
 		</Unit>
-		<Unit filename="C:/Users/songai/CLionProjects/Sort/selectionSort.cpp">
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/main/shellSort.cpp">
 			<Option target="Sort"/>
 		</Unit>
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/CMakeLists.txt">
