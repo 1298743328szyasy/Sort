@@ -16,6 +16,20 @@ namespace SortTestHelper {
             arr[i] = rand() % (rangeR - rangeL + 1) + rangeL;
         return arr;
     }
+    //生成一个近乎有序的数组
+    int *generateNearlyOrderedArray(int n,int swapTimes){
+        int *arr=new int [n];
+        for(int i=0;i<n;i++)
+            arr[i]=i;
+        srand(time(NULL));
+        //无序的个数
+        for(int i=0;i<swapTimes;i++){
+            int posx=rand()%n;
+            int posy=rand()%n;
+            swap(arr[posx],arr[posy]);
+        }
+        return arr;
+    }
     //打印函数
     template<typename T>
     void pringArray(T arr, int n) {

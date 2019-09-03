@@ -86,7 +86,10 @@
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/selectionSort.h">
 			<Option target="Sort"/>
 		</Unit>
-		<Unit filename="C:/Users/songai/CLionProjects/Sort/main/shellSort.cpp">
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/shellSort.h">
+			<Option target="Sort"/>
+		</Unit>
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/main/main.cpp">
 			<Option target="Sort"/>
 		</Unit>
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/CMakeLists.txt">

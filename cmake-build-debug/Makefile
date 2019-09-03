@@ -122,32 +122,32 @@ Sort/fast:
 	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/build
 .PHONY : Sort/fast
 
-main/shellSort.obj: main/shellSort.cpp.obj
+main/main.obj: main/main.cpp.obj
 
-.PHONY : main/shellSort.obj
+.PHONY : main/main.obj
 
 # target to build an object file
-main/shellSort.cpp.obj:
-	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/shellSort.cpp.obj
-.PHONY : main/shellSort.cpp.obj
+main/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/main.cpp.obj
+.PHONY : main/main.cpp.obj
 
-main/shellSort.i: main/shellSort.cpp.i
+main/main.i: main/main.cpp.i
 
-.PHONY : main/shellSort.i
+.PHONY : main/main.i
 
 # target to preprocess a source file
-main/shellSort.cpp.i:
-	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/shellSort.cpp.i
-.PHONY : main/shellSort.cpp.i
+main/main.cpp.i:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/main.cpp.i
+.PHONY : main/main.cpp.i
 
-main/shellSort.s: main/shellSort.cpp.s
+main/main.s: main/main.cpp.s
 
-.PHONY : main/shellSort.s
+.PHONY : main/main.s
 
 # target to generate assembly for a file
-main/shellSort.cpp.s:
-	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/shellSort.cpp.s
-.PHONY : main/shellSort.cpp.s
+main/main.cpp.s:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/main/main.cpp.s
+.PHONY : main/main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... Sort
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main/shellSort.obj
-	@echo ... main/shellSort.i
-	@echo ... main/shellSort.s
+	@echo ... main/main.obj
+	@echo ... main/main.i
+	@echo ... main/main.s
 .PHONY : help
 
 

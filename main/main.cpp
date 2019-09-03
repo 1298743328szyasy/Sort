@@ -25,7 +25,7 @@ void shellSort(T arr[],int n) {
     }
 }
 int main(){
-    int n=20000;
+      int n=20000;
     cout<<"Test for random array,size = "<<n<<",random range[0,"<<n<<"]"<<endl;
     int *arr1=SortTestHelper::generateRandomArray(n,0,n);
     int *arr2=SortTestHelper::copyIntArray(arr1,n);
@@ -33,4 +33,18 @@ int main(){
     SortTestHelper::testSort("Selection Sort",selectionSort,arr1,n);
     SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
     SortTestHelper::testSort("Shell Sort",shellSort,arr3,n);
+    delete[] arr1;
+    delete[] arr2;
+    delete[] arr3;
+      int swapTimes=100;
+      cout<<"Test for nearly ordered array,size = "<<n<<",swap time="<<swapTimes<<endl;
+      arr1=SortTestHelper::generateNearlyOrderedArray(n,swapTimes);
+      arr2=SortTestHelper::copyIntArray(arr1,n);
+      arr3=SortTestHelper::copyIntArray(arr1,n);
+      SortTestHelper::testSort("Selection Sort",selectionSort,arr1,n);
+      SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
+      SortTestHelper::testSort("Shell Sort",shellSort,arr3,n);
+      delete[] arr1;
+      delete[] arr2;
+      delete[] arr3;
 }

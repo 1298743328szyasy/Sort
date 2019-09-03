@@ -56,27 +56,27 @@ include CMakeFiles/Sort.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Sort.dir/flags.make
 
-CMakeFiles/Sort.dir/main/shellSort.cpp.obj: CMakeFiles/Sort.dir/flags.make
-CMakeFiles/Sort.dir/main/shellSort.cpp.obj: ../main/shellSort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\songai\CLionProjects\Sort\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Sort.dir/main/shellSort.cpp.obj"
-	D:\Clion\MInGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Sort.dir\main\shellSort.cpp.obj -c C:\Users\songai\CLionProjects\Sort\main\shellSort.cpp
+CMakeFiles/Sort.dir/main/main.cpp.obj: CMakeFiles/Sort.dir/flags.make
+CMakeFiles/Sort.dir/main/main.cpp.obj: ../main/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\songai\CLionProjects\Sort\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Sort.dir/main/main.cpp.obj"
+	D:\Clion\MInGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Sort.dir\main\main.cpp.obj -c C:\Users\songai\CLionProjects\Sort\main\main.cpp
 
-CMakeFiles/Sort.dir/main/shellSort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sort.dir/main/shellSort.cpp.i"
-	D:\Clion\MInGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\songai\CLionProjects\Sort\main\shellSort.cpp > CMakeFiles\Sort.dir\main\shellSort.cpp.i
+CMakeFiles/Sort.dir/main/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sort.dir/main/main.cpp.i"
+	D:\Clion\MInGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\songai\CLionProjects\Sort\main\main.cpp > CMakeFiles\Sort.dir\main\main.cpp.i
 
-CMakeFiles/Sort.dir/main/shellSort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sort.dir/main/shellSort.cpp.s"
-	D:\Clion\MInGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\songai\CLionProjects\Sort\main\shellSort.cpp -o CMakeFiles\Sort.dir\main\shellSort.cpp.s
+CMakeFiles/Sort.dir/main/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sort.dir/main/main.cpp.s"
+	D:\Clion\MInGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\songai\CLionProjects\Sort\main\main.cpp -o CMakeFiles\Sort.dir\main\main.cpp.s
 
 # Object files for target Sort
 Sort_OBJECTS = \
-"CMakeFiles/Sort.dir/main/shellSort.cpp.obj"
+"CMakeFiles/Sort.dir/main/main.cpp.obj"
 
 # External object files for target Sort
 Sort_EXTERNAL_OBJECTS =
 
-Sort.exe: CMakeFiles/Sort.dir/main/shellSort.cpp.obj
+Sort.exe: CMakeFiles/Sort.dir/main/main.cpp.obj
 Sort.exe: CMakeFiles/Sort.dir/build.make
 Sort.exe: CMakeFiles/Sort.dir/linklibs.rsp
 Sort.exe: CMakeFiles/Sort.dir/objects1.rsp

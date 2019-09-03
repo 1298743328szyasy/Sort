@@ -10,6 +10,7 @@
 using namespace std;
 template<typename T>
 void selectionSort(T arr[],int n){
+    //每一轮:从第一个开始一直比到最后一个得出此轮的最小数与最前面的数交换
     for(int i=0;i<n;i++){
         int minIndex=i;
         for(int j=i+1;j<n;j++)

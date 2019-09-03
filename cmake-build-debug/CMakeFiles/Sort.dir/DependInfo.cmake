@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/songai/CLionProjects/Sort/main/shellSort.cpp" "C:/Users/songai/CLionProjects/Sort/cmake-build-debug/CMakeFiles/Sort.dir/main/shellSort.cpp.obj"
+  "C:/Users/songai/CLionProjects/Sort/main/main.cpp" "C:/Users/songai/CLionProjects/Sort/cmake-build-debug/CMakeFiles/Sort.dir/main/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
