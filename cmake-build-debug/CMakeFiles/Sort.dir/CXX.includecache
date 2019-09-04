@@ -28,6 +28,12 @@ iostream
 algorithm
 -
 
+C:/Users/songai/CLionProjects/Sort/header/shellSort.h
+iostream
+-
+algorithm
+-
+
 C:/Users/songai/CLionProjects/Sort/main/main.cpp
 iostream
 -
@@ -37,6 +43,8 @@ C:/Users/songai/CLionProjects/Sort/header/SortTestHelper.h
 C:/Users/songai/CLionProjects/Sort/header/insertionSort.h
 ../header/selectionSort.h
 C:/Users/songai/CLionProjects/Sort/header/selectionSort.h
+../header/shellSort.h
+C:/Users/songai/CLionProjects/Sort/header/shellSort.h
 string
 -
 
