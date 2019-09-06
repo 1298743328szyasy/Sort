@@ -3,7 +3,5 @@
 
 CMakeFiles/Sort.dir/main/main.cpp.obj: ../header/SortTestHelper.h
 CMakeFiles/Sort.dir/main/main.cpp.obj: ../header/insertionSort.h
-CMakeFiles/Sort.dir/main/main.cpp.obj: ../header/selectionSort.h
-CMakeFiles/Sort.dir/main/main.cpp.obj: ../header/shellSort.h
 CMakeFiles/Sort.dir/main/main.cpp.obj: ../main/main.cpp
 

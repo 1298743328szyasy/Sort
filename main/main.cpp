@@ -4,73 +4,55 @@
 #include <iostream>
 #include "../header/SortTestHelper.h"
 #include "../header/insertionSort.h"
-#include "../header/selectionSort.h"
-#include "../header/shellSort.h"
 #include <string>
 using namespace std;
 template<typename T>
-//类似选择排序
-//冒泡排序利用循环比较先将大数放大后面每一轮放一个数
-//每轮将n减小1不再与后面的数比较
-void bubbleSort(T arr[],int n){
-    bool swapped;
-    do{
-        swapped = false;
-        for(int i=1;i<n;i++)
-            if(arr[i-1]>arr[i]){
-                swap(arr[i-1],arr[i]);
-                swapped=true;
-            }
-        n--;
-    }while(swapped);
+void __merge(T arr[],int l,int mid,int r){
+    T aux[r-l+1];
+    for(int i=l;i<=r;i++)
+        aux[i-l]=arr[i];
+    int i = l,j=mid+1;
+    for(int k=l;k<=r;k++){
+        if(i>mid){
+            arr[k]=aux[j-l];
+            j++;
+        }else if(j>r){
+            arr[k]=aux[i-l];
+            i++;
+        }
+        else if(aux[i-l]<aux[j-l]){
+            arr[k]=aux[i-l];
+            i++;
+        }else{
+            arr[k]=aux[j-l];
+            j++;
+        }
+    }
+
 }
 template<typename T>
-void bubbleSort2(T arr[],int n){
-    int newn;
-    do{
-        newn=0;
-        for(int i=1;i<n;i++)
-            if(arr[i-1]>arr[i]) {
-                swap(arr[i - 1], arr[i]);
-                newn=i;
-            }
-        n=newn;
-    }while(newn>0);
+//[0,n-1],[0,(n-1)/2],[(n+1)/2,n-1],[0,(n-1)4],[(n+3)/4,(n-1)/2],[(n+1)/2,(3n-1)/2],[(3n+1)/4,n-1]列出两组递归结果
+void __mergeSort(T arr[],int l,int r){
+    if(l>=r)
+        return;
+    int mid=(l+r)/2;
+    __mergeSort(arr,l,mid);
+    __mergeSort(arr,mid+1,r);
+    __merge(arr,l,mid,r);
+}
+template<typename T>
+void mergeSort(T arr[],int n){
+    __mergeSort(arr,0,n-1);
 }
 int main(){
-      int n=20000;
-    cout<<"Test for random array,size = "<<n<<",random range[0,"<<n<<"]"<<endl;
+    int n=50000;
+    cout<<"Test for Random Array, size = "<<n<<",random range [0,"<<n<<"]"<<endl;
     int *arr1=SortTestHelper::generateRandomArray(n,0,n);
     int *arr2=SortTestHelper::copyIntArray(arr1,n);
-    int *arr3=SortTestHelper::copyIntArray(arr1,n);
-    int *arr4=SortTestHelper::copyIntArray(arr1,n);
-    int *arr5=SortTestHelper::copyIntArray(arr1,n);
-    SortTestHelper::testSort("Selection Sort",selectionSort,arr1,n);
-    SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
-    SortTestHelper::testSort("Shell Sort",shellSort,arr3,n);
-    SortTestHelper::testSort("Bubble Sort",bubbleSort,arr4,n);
-    SortTestHelper::testSort("Bubble Sort2",bubbleSort2,arr5,n);
-
+    SortTestHelper::testSort("Insertion Sort",insertionSort,arr1,n);
+    SortTestHelper::testSort("Merge Sort",mergeSort,arr2,n);
     delete[] arr1;
     delete[] arr2;
-    delete[] arr3;
-    delete[] arr4;
-    delete[] arr5;
-      int swapTimes=100;
-      cout<<"Test for nearly ordered array,size = "<<n<<",swap time="<<swapTimes<<endl;
-      arr1=SortTestHelper::generateNearlyOrderedArray(n,swapTimes);
-      arr2=SortTestHelper::copyIntArray(arr1,n);
-      arr3=SortTestHelper::copyIntArray(arr1,n);
-      arr4=SortTestHelper::copyIntArray(arr1,n);
-      arr5=SortTestHelper::copyIntArray(arr1,n);
-      SortTestHelper::testSort("Selection Sort",selectionSort,arr1,n);
-      SortTestHelper::testSort("Insertion Sort",insertionSort,arr2,n);
-      SortTestHelper::testSort("Shell Sort",shellSort,arr3,n);
-      SortTestHelper::testSort("Bubble Sort",bubbleSort,arr4,n);
-      SortTestHelper::testSort("Bubble Sort2",bubbleSort2,arr5,n);
-      delete[] arr1;
-      delete[] arr2;
-      delete[] arr3;
-      delete[] arr4;
-      delete[] arr5;
+    cout<<endl;
+    return 0;
 }

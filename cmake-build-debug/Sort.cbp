@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/BubbleSort.h">
+			<Option target="Sort"/>
+		</Unit>
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/insertionSort.h">
 			<Option target="Sort"/>
 		</Unit>
