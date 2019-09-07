@@ -25,10 +25,10 @@ algorithm
 C:/Users/songai/CLionProjects/Sort/main/main.cpp
 iostream
 -
+cstring
+-
 ../header/SortTestHelper.h
 C:/Users/songai/CLionProjects/Sort/header/SortTestHelper.h
 ../header/insertionSort.h
 C:/Users/songai/CLionProjects/Sort/header/insertionSort.h
-string
--
 

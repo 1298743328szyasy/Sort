@@ -2,36 +2,33 @@
 // Created by songai on 2019/9/2.
 //
 #include <iostream>
+#include <cstring>
 #include "../header/SortTestHelper.h"
 #include "../header/insertionSort.h"
-#include <string>
 using namespace std;
-template<typename T>
+template <typename T>
 void __merge(T arr[],int l,int mid,int r){
     T aux[r-l+1];
     for(int i=l;i<=r;i++)
         aux[i-l]=arr[i];
-    int i = l,j=mid+1;
+    int i=l,j=mid+1;
     for(int k=l;k<=r;k++){
-        if(i>mid){
+        if(i>mid) {
             arr[k]=aux[j-l];
             j++;
         }else if(j>r){
             arr[k]=aux[i-l];
             i++;
-        }
-        else if(aux[i-l]<aux[j-l]){
+        }else if(aux[i-l]<aux[j-l]){
             arr[k]=aux[i-l];
             i++;
-        }else{
-            arr[k]=aux[j-l];
+        }else {
+            arr[k] = aux[j - l];
             j++;
         }
     }
-
 }
-template<typename T>
-//[0,n-1],[0,(n-1)/2],[(n+1)/2,n-1],[0,(n-1)4],[(n+3)/4,(n-1)/2],[(n+1)/2,(3n-1)/2],[(3n+1)/4,n-1]列出两组递归结果
+template <typename T>
 void __mergeSort(T arr[],int l,int r){
     if(l>=r)
         return;
@@ -40,19 +37,16 @@ void __mergeSort(T arr[],int l,int r){
     __mergeSort(arr,mid+1,r);
     __merge(arr,l,mid,r);
 }
-template<typename T>
+template <typename T>
 void mergeSort(T arr[],int n){
     __mergeSort(arr,0,n-1);
 }
 int main(){
     int n=50000;
-    cout<<"Test for Random Array, size = "<<n<<",random range [0,"<<n<<"]"<<endl;
     int *arr1=SortTestHelper::generateRandomArray(n,0,n);
     int *arr2=SortTestHelper::copyIntArray(arr1,n);
-    SortTestHelper::testSort("Insertion Sort",insertionSort,arr1,n);
-    SortTestHelper::testSort("Merge Sort",mergeSort,arr2,n);
+    SortTestHelper::testSort("InsertionSort",insertionSort,arr1,n);
+    SortTestHelper::testSort("merge Sort",mergeSort,arr2,n);
     delete[] arr1;
     delete[] arr2;
-    cout<<endl;
-    return 0;
 }
