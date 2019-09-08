@@ -86,6 +86,9 @@
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/insertionSort.h">
 			<Option target="Sort"/>
 		</Unit>
+		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/mergeSort.h">
+			<Option target="Sort"/>
+		</Unit>
 		<Unit filename="C:/Users/songai/CLionProjects/Sort/header/selectionSort.h">
 			<Option target="Sort"/>
 		</Unit>
